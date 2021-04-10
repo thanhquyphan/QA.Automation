@@ -13,7 +13,8 @@ namespace TQP.QA.Automation.UI.Test.Pages
         private IWebElement SearchField
             => WebDriver.FindElement(By.Name("q"));
 
-        private GoogleSearchResultPage ResultPage { get; set; }
+        private GoogleSearchResultPage ResultPage
+            => new GoogleSearchResultPage(BrowserDriver);
 
         public void Navigate()
             => BrowserDriver.Navigate();
