@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace TQP.QA.Automation.UI.Core.Helpers
+namespace TQP.QA.Automation.Shared
 {
     public static class EnvironmentHelpers
     {

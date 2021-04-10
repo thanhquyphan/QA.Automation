@@ -1,4 +1,4 @@
-﻿namespace TQP.QA.Automation.UI.Core
+﻿namespace TQP.QA.Automation.Shared
 {
     public class AppSettings
     {

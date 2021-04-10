@@ -5,9 +5,11 @@ VisualStudioVersion = 16.0.30717.126
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BrowserDrivers", "BrowserDrivers", "{898C9A30-0911-45D5-BC52-3509A8248038}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TQP.QA.Automation.UI.BrowserDrivers.Chrome", "TQP.QA.Automation.UI.BrowserDrivers.Chrome\TQP.QA.Automation.UI.BrowserDrivers.Chrome.csproj", "{785E31CC-E694-4DEF-9D1A-240165FE1AC7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TQP.QA.Automation.UI.BrowserDrivers.Chrome", "TQP.QA.Automation.UI.BrowserDrivers.Chrome\TQP.QA.Automation.UI.BrowserDrivers.Chrome.csproj", "{785E31CC-E694-4DEF-9D1A-240165FE1AC7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TQP.QA.Automation.UI.Core", "TQP.QA.Automation.UI.Core\TQP.QA.Automation.UI.Core.csproj", "{D076F623-D24F-4134-A990-041F112A452B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TQP.QA.Automation.UI.Core", "TQP.QA.Automation.UI.Core\TQP.QA.Automation.UI.Core.csproj", "{D076F623-D24F-4134-A990-041F112A452B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TQP.QA.Automation.Shared", "TQP.QA.Automation.Shared\TQP.QA.Automation.Shared.csproj", "{5E7B6050-49C4-4E43-B9F9-B0326793BBEC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,6 +25,10 @@ Global
 		{D076F623-D24F-4134-A990-041F112A452B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D076F623-D24F-4134-A990-041F112A452B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D076F623-D24F-4134-A990-041F112A452B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5E7B6050-49C4-4E43-B9F9-B0326793BBEC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E7B6050-49C4-4E43-B9F9-B0326793BBEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E7B6050-49C4-4E43-B9F9-B0326793BBEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E7B6050-49C4-4E43-B9F9-B0326793BBEC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

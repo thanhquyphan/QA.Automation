@@ -9,10 +9,12 @@
     <PackageReference Include="CliWrap" Version="3.3.2" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="5.0.0" />
     <PackageReference Include="Microsoft.Extensions.Http" Version="5.0.0" />
+    <PackageReference Include="Selenium.WebDriver" Version="3.141.0" />
+    <PackageReference Include="System.Configuration.ConfigurationManager" Version="5.0.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\TQP.QA.Automation.UI.Core\TQP.QA.Automation.UI.Core.csproj" />
+    <ProjectReference Include="..\TQP.QA.Automation.Shared\TQP.QA.Automation.Shared.csproj" />
   </ItemGroup>
 
 </Project>

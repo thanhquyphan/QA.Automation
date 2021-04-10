@@ -1,7 +1,6 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using System;
-using TQP.QA.Automation.UI.Core;
-using TQP.QA.Automation.UI.Core.Helpers;
+using TQP.QA.Automation.Shared;
 
 namespace TQP.QA.Automation.UI.BrowserDrivers.Chrome
 {

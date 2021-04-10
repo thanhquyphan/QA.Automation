@@ -3,8 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Text;
-using TQP.QA.Automation.UI.Core.Helpers;
+using TQP.QA.Automation.Shared;
 
 namespace TQP.QA.Automation.UI.Core
 {
