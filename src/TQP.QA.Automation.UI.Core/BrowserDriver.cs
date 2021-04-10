@@ -11,8 +11,6 @@ namespace TQP.QA.Automation.UI.Core
     {
         private readonly BrowserDriverFactorySelenium _browserSeleniumDriverFactory;
         private readonly Lazy<IWebDriver> _currentWebDriverLazy;
-        private readonly Lazy<WebDriverWait> _waitLazy;
-        private readonly TimeSpan _waitDuration = TimeSpan.FromSeconds(10);
         private readonly string _hostUrl;
 
         private bool _isDisposed;
@@ -24,7 +22,6 @@ namespace TQP.QA.Automation.UI.Core
         {
             _browserSeleniumDriverFactory = browserSeleniumDriverFactory;
             _currentWebDriverLazy = new Lazy<IWebDriver>(GetWebDriver);
-            _waitLazy = new Lazy<WebDriverWait>(GetWebDriverWait);
 
             if (configuration == null) throw new ArgumentNullException(nameof(configuration));
             if (configuration.Value == null) throw new ArgumentNullException(nameof(configuration.Value));
@@ -36,8 +33,6 @@ namespace TQP.QA.Automation.UI.Core
         }
 
         public IWebDriver Current => _currentWebDriverLazy.Value;
-
-        public WebDriverWait CurrentWebDriverWait => _waitLazy.Value;
 
         public void Dispose()
         {
@@ -90,9 +85,6 @@ namespace TQP.QA.Automation.UI.Core
 
             return screenshotsDir;
         }
-
-        private WebDriverWait GetWebDriverWait()
-            => new WebDriverWait(Current, _waitDuration);
 
         private IWebDriver GetWebDriver()
             => _browserSeleniumDriverFactory.GetWebDriver(_hostUrl);

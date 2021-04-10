@@ -9,7 +9,6 @@ namespace TQP.QA.Automation.UI.Core
     {
         protected BrowserDriver BrowserDriver { get; set; }
         protected IWebDriver WebDriver => BrowserDriver.Current;
-        protected WebDriverWait WebDriverWait => BrowserDriver.CurrentWebDriverWait;
 
         protected PageBase(BrowserDriverManager browserDriverManager, IOptions<AppSettings> appSettings)
         {

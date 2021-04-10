@@ -11,6 +11,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TQP.QA.Automation.UI.Core",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TQP.QA.Automation.Shared", "TQP.QA.Automation.Shared\TQP.QA.Automation.Shared.csproj", "{5E7B6050-49C4-4E43-B9F9-B0326793BBEC}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Samples", "Samples", "{37359EFA-BE43-4C6D-A7E2-655B37F9EAC4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TQP.QA.Automation.UI.Test", "TQP.QA.Automation.UI.Test\TQP.QA.Automation.UI.Test.csproj", "{D8D8A329-93CD-4044-84C9-8500849D9BF3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,12 +33,17 @@ Global
 		{5E7B6050-49C4-4E43-B9F9-B0326793BBEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5E7B6050-49C4-4E43-B9F9-B0326793BBEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5E7B6050-49C4-4E43-B9F9-B0326793BBEC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D8D8A329-93CD-4044-84C9-8500849D9BF3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D8D8A329-93CD-4044-84C9-8500849D9BF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D8D8A329-93CD-4044-84C9-8500849D9BF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D8D8A329-93CD-4044-84C9-8500849D9BF3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{785E31CC-E694-4DEF-9D1A-240165FE1AC7} = {898C9A30-0911-45D5-BC52-3509A8248038}
+		{D8D8A329-93CD-4044-84C9-8500849D9BF3} = {37359EFA-BE43-4C6D-A7E2-655B37F9EAC4}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B13324F0-AC5B-4A75-AD7A-5E1A36ADB4FA}
