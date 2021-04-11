@@ -30,8 +30,8 @@ namespace TQP.QA.Automation.UI.BrowserDrivers.Chrome
             if (appSettings?.Browser?.Chrome == null) throw new ArgumentNullException("ChromeSetting");
 
             _chromeConfig = appSettings.Browser.Chrome;
-            _testDirectory = Path.GetDirectoryName(Assembly.GetExecutingAssembly().GetName().CodeBase);
-            ;
+            _testDirectory = Path.GetDirectoryName(Assembly.GetExecutingAssembly().GetName().CodeBase)
+                .Replace("file:\\", string.Empty);
         }
 
         public IWebDriver GetChromeDriver(string hostUrl)

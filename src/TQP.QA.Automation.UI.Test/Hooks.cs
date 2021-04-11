@@ -87,7 +87,7 @@ namespace TQP.QA.Automation.UI.Test
         public static void FinishRun()
         {
             BrowserDriverManager.DisposeAll();
-            //ReportService.BuildReport(_appSettings, _testRunStart);
+            ReportService.LaunchReport(_appSettings, _testRunStart);
         }
     }
 }

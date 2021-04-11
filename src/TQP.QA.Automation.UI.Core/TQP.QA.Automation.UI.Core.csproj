@@ -26,4 +26,12 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="PowershellScripts\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="PowershellScripts\*">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
 </Project>
