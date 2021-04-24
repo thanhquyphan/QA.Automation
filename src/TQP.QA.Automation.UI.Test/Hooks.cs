@@ -28,7 +28,7 @@ namespace TQP.QA.Automation.UI.Test
             _testRunStart = DateTime.Now;
         }
 
-        [BeforeScenario(Order = 1)]
+        [BeforeScenario]
         public void Startup()
         {
         }
@@ -67,11 +67,11 @@ namespace TQP.QA.Automation.UI.Test
             _appSettings = AppSettingsBuilder.Build(_configuration, testRunContext.TestDirectory);
         }
 
-        [AfterScenario()]
+        [AfterScenario]
         public void EndScenario()
             => GetBrowserDriver().Dispose();
 
-        [AfterStep()]
+        [AfterStep]
         public void AfterStep()
             => GetBrowserDriver().TakeScreenshotWithCurrent();
 

@@ -9,7 +9,6 @@ namespace TQP.QA.Automation.UI.Core
 {
     public class AppSettingsBuilder
     {
-
         /// <summary>
         /// Root dir for test execution. Should contain all required settings files
         /// </summary>
@@ -57,9 +56,6 @@ namespace TQP.QA.Automation.UI.Core
             var appSettings = new AppSettings();
 
             cfg.Bind(appSettings);
-
-            //if (string.IsNullOrWhiteSpace(appSettings.TestDirectory))
-            //    appSettings.TestDirectory = testDirectory;
 
             return appSettings;
 

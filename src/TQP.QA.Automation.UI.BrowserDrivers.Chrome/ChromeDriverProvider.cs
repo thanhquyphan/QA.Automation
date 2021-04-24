@@ -121,17 +121,9 @@ namespace TQP.QA.Automation.UI.BrowserDrivers.Chrome
             if (appSettings.Browser == null)
                 throw new ConfigurationErrorsException();
 
-            //If nothing is configured locally for chrome we should still be able to figure it all out
-
             if (appSettings.Browser.Chrome == null)
                 appSettings.Browser.Chrome = new AppSettings.BrowserConfiguration.ChromeConfiguration();
 
-            //..Get the user's installed chrome version
-            //.... Work out which chrome driver they should be user
-            //...... For now, bundle versions with the repo and use well-known path conventions
-            //........ Look for an exact match otherwise use a major version match
-
-            //Check if the ChromeDriverDirectory is explicitly configured, if not, work it out
             if (string.IsNullOrWhiteSpace(appSettings.Browser.Chrome.DriverDirectory))
             {
                 var defaultChromeDriverDir =
@@ -142,9 +134,6 @@ namespace TQP.QA.Automation.UI.BrowserDrivers.Chrome
 
                 var installedChromeVersion = await GetChromeVersion();
 
-                //We expect subfolders under the Chrome dir to have versions as their names
-
-                //Look for an exact match
                 var chromeDriverFolderMatch = defaultChromeDriverDir.GetDirectories()
                     .SingleOrDefault(x => x.Name.StartsWith(installedChromeVersion, StringComparison.OrdinalIgnoreCase));
 
@@ -181,8 +170,6 @@ namespace TQP.QA.Automation.UI.BrowserDrivers.Chrome
 
             var targetPath = Path.Combine(_defaultDriversDirectoryChrome, chromeDriverVersion, driverName);
 
-            // this reads the zipfile as a stream, opens the archive, 
-            // and extracts the chromedriver executable to the targetPath without saving any intermediate files to disk
             using (var zipFileStream = await chromeDriverHttpClient.Download(chromeDriverVersion))
             using (var zipArchive = new ZipArchive(zipFileStream, ZipArchiveMode.Read))
             using (var chromeDriverWriter = new FileStream(targetPath, FileMode.Create))
@@ -192,7 +179,6 @@ namespace TQP.QA.Automation.UI.BrowserDrivers.Chrome
                 await chromeDriverStream.CopyToAsync(chromeDriverWriter);
             }
 
-            // on Linux/macOS, you need to add the executable permission (+x) to allow the execution of the chromedriver
             if (RuntimeInformation.IsOSPlatform(OSPlatform.Linux) ||
                 RuntimeInformation.IsOSPlatform(OSPlatform.OSX))
             {
@@ -237,8 +223,6 @@ namespace TQP.QA.Automation.UI.BrowserDrivers.Chrome
                     .WithArguments(
                         "datafile where name=\"C:\\\\Program Files\\\\Google\\\\Chrome\\\\Application\\\\chrome.exe\" get Version /value")
                     .ExecuteBufferedAsync().Task.Result;
-
-                    //Versions can be downloaded from here: https://chromedriver.storage.googleapis.com/index.html
 
                     versionText = output.StandardOutput.Trim();
 

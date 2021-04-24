@@ -33,7 +33,7 @@
 
             public enum BrowserTypeEnum
             {
-                Chrome,
+                Chrome
             }
         }
 

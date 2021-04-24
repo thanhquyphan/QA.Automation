@@ -7,9 +7,13 @@ namespace TQP.QA.Automation.UI.Test.Features
     public class GoogleSteps
     {
         private readonly GooglePage _googlePage;
+        private readonly ScenarioContext _scenarioContext;
 
-        public GoogleSteps(GooglePage googlePage)
+        public GoogleSteps(
+            ScenarioContext scenarioContext,
+            GooglePage googlePage)
         {
+            _scenarioContext = scenarioContext;
             _googlePage = googlePage;
         }
 
